@@ -42,7 +42,7 @@ class LoginForm extends Component {
         return (
             <Button onPress={this.onButtonPress.bind(this)}>
                 Log In
-                    </Button>
+             </Button>
         );
     }
 
@@ -57,6 +57,7 @@ class LoginForm extends Component {
                         onChangeText={email => this.setState({ email })}
                     />
                 </CardSection>
+
                 <CardSection>
                     <Input
                         placeholder="password"
@@ -66,9 +67,11 @@ class LoginForm extends Component {
                         onChangeText={password => this.setState({ password })}
                     />
                 </CardSection>
+
                 <Text style={styles.errorTextStyle}>
                     {this.state.error}
                 </Text>
+                
                 <CardSection>
                     {this.renderButton()}
                 </CardSection>
